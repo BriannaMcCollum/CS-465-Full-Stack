@@ -24,6 +24,43 @@
           </div>
         </div>
       </div>
+
+      <div class="form-group">
+        <label>Length:</label>
+        <input type="text" formControlName="Length"
+          placeholder="Length" class="form-control"
+          [ngClass]="{ 'is-invalid': submitted && f.length.errors }">
+        <div *ngIf="submitted && f.length.errors">
+          <div *ngIf="f.length.errors.required">
+            Length is required
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Start Date:</label>
+        <input type="text" formControlName="Start"
+          placeholder="Start" class="form-control"
+          [ngClass]="{ 'is-invalid': submitted && f.start.errors }">
+        <div *ngIf="submitted && f.start.errors">
+          <div *ngIf="f.start.errors.required">
+            Start Date is required
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Resort:</label>
+        <input type="text" formControlName="Resort"
+          placeholder="Resort" class="form-control"
+          [ngClass]="{ 'is-invalid': submitted && f.resort.errors }">
+        <div *ngIf="submitted && f.resort.errors">
+          <div *ngIf="f.resort.errors.required">
+            Resort is required
+          </div>
+        </div>
+      </div>
+
     <button type="submit" class="btn btn-info">Save</button>
   </form>
 </div>
